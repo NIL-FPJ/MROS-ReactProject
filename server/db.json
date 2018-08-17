@@ -1,0 +1,20 @@
+{
+  "user": [
+    {
+      "id": 20001,
+      "username": "钢铁侠",
+      "password": "123456",
+      "role": "普通用户",
+      "level": 5,
+      "permission": []
+    },
+    {
+      "id": 10001,
+      "username": "美国队长",
+      "password": "123456",
+      "role": "管理员",
+      "level": 8,
+      "permission": ["all"]
+    }
+  ]
+}
