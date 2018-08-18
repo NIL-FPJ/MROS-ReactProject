@@ -1,6 +1,6 @@
 
-// 定义一个常量库
+// 定义一个常量名库
 
 const CHANGE_USER_STATE = 'CHANGE_USER_STATE'
-
-export { CHANGE_USER_STATE }
+const CHANGE_MENU_LIST = 'CHANGE_MENU_LIST'
+export { CHANGE_USER_STATE, CHANGE_MENU_LIST }

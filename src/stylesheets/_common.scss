@@ -1,0 +1,28 @@
+
+// 刚刚布局的样式
+
+.logo {
+  height: 32px;
+  background: rgba(255,255,255,.2);
+  margin: 16px;
+  text-align: center;
+  line-height: 32px;
+  color: #ccc;
+  font-size: 18px;
+}
+
+.ant-layout-header{
+  line-height: 64px; 
+}
+
+.ant-layout-footer {
+  background: #fff;
+  height: 30px;
+  width: 100%;
+  padding: 0;
+}
+.ant-layout-sider-trigger {
+  height: 30px;
+  line-height: 30px;
+}
+

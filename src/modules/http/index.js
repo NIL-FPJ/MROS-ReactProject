@@ -7,6 +7,8 @@ import bus from '../bus'
 const http = {
   ajax(options) {
     return new Promise((resolve, reject) => {
+      // 显示加载
+      bus.emit('change-loading', true)
       axios({
         url: options.url,
         method: options.method || 'GET',
@@ -14,10 +16,12 @@ const http = {
       }).then(res => {
         if (res.status === 200) {
           resolve(res.data)
+          bus.emit('change-loading')
         } else {
           let err = { status: res.status }
           err.message = this.judgestatus(res.status)
           reject(err)
+          bus.emit('change-loading')
         }
       }).catch(err => {
         reject(err)

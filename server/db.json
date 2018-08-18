@@ -1,20 +1,62 @@
 {
   "user": [
     {
-      "id": 20001,
-      "username": "钢铁侠",
-      "password": "123456",
-      "role": "普通用户",
-      "level": 5,
-      "permission": []
-    },
-    {
       "id": 10001,
-      "username": "美国队长",
-      "password": "123456",
-      "role": "管理员",
+      "username": "1",
+      "password": "1",
+      "role": "admin",
       "level": 8,
       "permission": ["all"]
+    },
+    {
+      "id": 20001,
+      "username": "2",
+      "password": "2",
+      "role": "normal",
+      "level": 5,
+      "permission": []
+    }
+  ],
+  "menu_list": [
+    {
+      "title": "首页",
+      "path": "/",
+      "icon": ""
+    },
+    {
+      "title": "预定会议室",
+      "path": "/reserve_metting_room",
+      "icon": ""
+    },
+    {
+      "title": "我的预定",
+      "path": "/my_reserve",
+      "icon": ""
+    },
+    {
+      "title": "预定审批",
+      "path": "/reserve_approval",
+      "icon": ""
+    },
+    {
+      "title": "会议室预定管理",
+      "path": "/reserve_manage",
+      "icon": ""
+    },
+    {
+      "title": "会议室管理",
+      "path": "/meeting_room_manage",
+      "icon": ""
+    },
+    {
+      "title": "区域建筑物管理",
+      "path": "/regional_manage",
+      "icon": ""
+    },
+    {
+      "title": "系统设置",
+      "path": "/setup",
+      "icon": ""
     }
   ]
 }

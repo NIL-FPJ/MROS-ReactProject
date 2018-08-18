@@ -1,11 +1,10 @@
 
-
 import React, { Component } from 'react'
 import './index.scss'
 import connect from '../../../modules/connect'
 import { Form, Icon, Input, Button, Checkbox } from 'antd';
-const FormItem = Form.Item;
 
+const FormItem = Form.Item;
 class _Login extends Component {
 
   handleSubmit = (e) => {
