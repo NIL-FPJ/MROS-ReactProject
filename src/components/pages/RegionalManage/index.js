@@ -1,17 +1,29 @@
 
 
-import React, {Component} from 'react'
+import React, { Component } from 'react'
+import { Row, Col, Divider } from 'antd';
+import TableRight from './TableRight'
+import TableLeft from './TableLeft'
+
 import './index.scss'
 
 class RegionalManage extends Component {
-  constructor (props) {
-    super(props) 
-    this.state={}
+  constructor(props) {
+    super(props)
+    this.state = {}
   }
-  render () {
+  render() {
     return (
-      <div className = "RegionalManage">
-        区域管理
+      <div className="RegionalManage">
+        <Row>
+          <Col span={16}>
+            <TableLeft />
+          </Col>
+          
+          <Col span={8}>
+            <TableRight />
+          </Col>
+        </Row>
       </div>
     )
   }

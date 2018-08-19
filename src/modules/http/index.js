@@ -6,21 +6,24 @@ import bus from '../bus'
 
 const http = {
   ajax(options) {
+    console.log(options)
     return new Promise((resolve, reject) => {
       // 显示加载
       bus.emit('change-loading', true)
       axios({
         url: options.url,
         method: options.method || 'GET',
-        params: options.params || {}
+        params: options.params || {},
+        // `headers` 是即将被发送的自定义请求头
+        headers: { 'X-Requested-With': 'XMLHttpRequest', 'Content-Type': "application/json" },
+        // 将请求的数据转换成JSON格式的数据
+        transformRequest: [function (data) {
+          data = JSON.stringify(options.params)
+          return data;
+        }]
       }).then(res => {
-        if (res.status === 200) {
-          resolve(res.data)
-          bus.emit('change-loading')
-        } else {
-          let err = { status: res.status }
-          err.message = this.judgestatus(res.status)
-          reject(err)
+        if (res.status.toString().indexOf('2') === 0) {
+          resolve(res)
           bus.emit('change-loading')
         }
       }).catch(err => {

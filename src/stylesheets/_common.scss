@@ -1,5 +1,5 @@
 
-// 刚刚布局的样式
+// 重置ant布局的样式
 
 .logo {
   height: 32px;
@@ -18,11 +18,43 @@
 .ant-layout-footer {
   background: #fff;
   height: 30px;
+  line-height: 30px;
   width: 100%;
   padding: 0;
+  font-size: 12px;
+  color: #ccc;
+  border-top: 1px solid #eee;
 }
 .ant-layout-sider-trigger {
   height: 30px;
   line-height: 30px;
 }
 
+.ant-layout-content .ant-btn-primary{
+  width: 78px;
+  height: 32px;
+}
+
+.ant-table-title{
+  width: 100%;
+  height:40px;
+  line-height: 10px;
+  background-color: #001529;
+  padding-left:14px;
+  color: #fff;
+  border-radius: 0;
+}
+
+.ant-table-tbody > tr > td {
+  padding: 10px 10px;
+  word-break: break-word;
+  -ms-word-break: break-all;
+}
+
+.hearderSelect{
+  float: right;
+  padding-right: 250px;
+  .ant-btn{
+    margin-right: 20px;
+  }
+}

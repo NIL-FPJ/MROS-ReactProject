@@ -3,6 +3,10 @@
 import React, {Component} from 'react'
 import './index.scss'
 
+import DatePicker from '../../DatePicker'
+import Table from '../../Table'
+import Filter from '../../Filter'
+
 class ReserveMeetingRoom extends Component {
   constructor (props) {
     super(props) 
@@ -11,7 +15,9 @@ class ReserveMeetingRoom extends Component {
   render () {
     return (
       <div className = "ReserveMeetingRoom">
-        会议室预定
+        {/* <DatePicker></DatePicker> */}
+        <Filter/>
+        <Table></Table>
       </div>
     )
   }

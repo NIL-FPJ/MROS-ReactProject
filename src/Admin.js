@@ -1,7 +1,8 @@
 
 // 页面中的主要组件，
 import React, { Component } from 'react'
-import { Layout, Breadcrumb } from 'antd';
+import { Layout, Breadcrumb, Icon, Button } from 'antd';
+import { Link } from 'react-router-dom'
 import LeftNav from './components/LeftNav'
 
 import connect from './modules/connect'
@@ -37,9 +38,10 @@ class Admin extends Component {
 
   render() {
     return (
-      <Layout style={{ minHeight: '100vh' }} >
+      <Layout style={{ paddingLeft: 200 }}>
         <Sider
-          collapsible
+          style={{ overflow: 'auto', height: '100vh', position: 'fixed', left: 0 }}
+          // collapsible // 收缩左边菜单
           collapsed={this.state.collapsed}
           onCollapse={this.onCollapse}
         // theme="light"
@@ -48,17 +50,24 @@ class Admin extends Component {
           <LeftNav getClickTitle={this.getClickTitle} menu_list={this.props.commons.menu_list}></LeftNav>
         </Sider>
         <Layout>
-          <Header style={{ borderBottom: '2px solid #1890ff', background: '#fff', padding: 0 }}>
+          <Header style={{ borderBottom: '2px solid #1890ff', background: '#fff', padding: 0, position: 'fixed', zIndex: 1, width: '100%' }}>
+            <div className = "hearderSelect" >
+              欢迎 ：
+              <Button><Icon style ={ {color: '#58bc58', fontWeight: 'bold'}} type={'user'} /> 17620138083 / 管理员</Button>
+              <Link to={ '/login' }><Icon type="logout" />退出</Link>
+            </div>
+            
             <Breadcrumb style={{ padding: '20px 15px', height: '100%' }}>
               <Breadcrumb.Item>{this.state.clickTitle} /</Breadcrumb.Item>
             </Breadcrumb>
           </Header>
-          <Content style={{ margin: '14px 14px 0 14px' }}>
-            <div style={{ padding: 14, background: '#fff', minHeight: 615 }}>
+          <Content style={{ margin: '74px 14px 38px', overflow: 'initial' }}>
+            <div style={{ background: '#fff', minHeight: 625 }}>
               {this.props.children}
             </div>
           </Content>
-          <Footer style={{ textAlign: 'center' }}>
+          <Footer style={{ textAlign: 'center', position: 'fixed', zIndex: 1, bottom: 0 }}>
+            Ant Design ©2018 Created by Ant UED, ReBuild Auto: FPJ
           </Footer>
         </Layout>
       </Layout>

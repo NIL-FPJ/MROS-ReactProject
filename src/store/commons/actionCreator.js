@@ -13,7 +13,7 @@ const actionCreator = {
         url: 'http://localhost:3003/user',
         params: { username, password }
       }).then(res => {
-        if (res.length >= 1) {
+        if (res.data.length >= 1) {
           let action = { type: CHANGE_USER_STATE, user_state: res }
           dispatch(action)
           // 保存登录状态
@@ -39,7 +39,8 @@ const actionCreator = {
       http.ajax({
         url: 'http://localhost:3003/menu_list'
       }).then(data => {
-        dispatch({ type: CHANGE_MENU_LIST, menu_list: data })
+        console.log(data.data)
+        dispatch({ type: CHANGE_MENU_LIST, menu_list: data.data })
       })
     }
   }

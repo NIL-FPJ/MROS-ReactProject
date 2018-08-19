@@ -1,23 +1,22 @@
 
-
 import React, {Component} from 'react'
-import TableConfig from './TableConfig'
-
 import './index.scss'
 
-class SETUP extends Component {
+import MyTable from '../../MyTable'
+
+class SpecialApply extends Component {
   constructor (props) {
     super(props) 
     this.state={}
   }
   render () {
     return (
-      <div className = "SETUP">
-        <TableConfig/>
+      <div className = "app-special-apply">
+      <MyTable/>
       </div>
     )
   }
 
 }
 
-export default SETUP
+export default SpecialApply

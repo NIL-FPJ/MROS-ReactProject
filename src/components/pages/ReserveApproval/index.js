@@ -3,6 +3,9 @@
 import React, {Component} from 'react'
 import './index.scss'
 
+import SpecialApply from './SpecialApply'
+import Calendar from '../../Calendar'
+
 class ReserveApproval extends Component {
   constructor (props) {
     super(props) 
@@ -11,7 +14,11 @@ class ReserveApproval extends Component {
   render () {
     return (
       <div className = "ReserveApproval">
-        预定审批
+        <SpecialApply/>
+        <hr/>
+          预定日历一览表
+        <hr/>
+        <Calendar/>
       </div>
     )
   }

@@ -6,12 +6,22 @@
       "password": "1",
       "role": "admin",
       "level": 8,
-      "permission": ["all"]
+      "permission": [
+        "all"
+      ]
     },
     {
       "id": 20001,
       "username": "2",
       "password": "2",
+      "role": "normal",
+      "level": 5,
+      "permission": []
+    },
+    {
+      "id": 20002,
+      "username": "方培杰1993",
+      "password": "6666",
       "role": "normal",
       "level": 5,
       "permission": []
@@ -39,11 +49,6 @@
       "icon": ""
     },
     {
-      "title": "会议室预定管理",
-      "path": "/reserve_manage",
-      "icon": ""
-    },
-    {
       "title": "会议室管理",
       "path": "/meeting_room_manage",
       "icon": ""
@@ -57,6 +62,242 @@
       "title": "系统设置",
       "path": "/setup",
       "icon": ""
+    }
+  ],
+  "posts": {
+    "success": true,
+    "id": 1
+  },
+  "meeting_room_data": [
+    {
+      "postId": 1,
+      "city": "北京",
+      "area": "海淀区",
+      "build": "奥北科技园",
+      "fullname": "北京海淀区-奥北科技园",
+      "record": 5,
+      "page": 1,
+      "rows": [
+        {
+          "area_id": 5,
+          "available": true,
+          "build_id": 9,
+          "build_name": "10-A座",
+          "capacity": 999,
+          "des": "此会议室预定需要管理员审批",
+          "floor": 1,
+          "name": "大会堂",
+          "open_reservation": false,
+          "open_reservation_c": "否",
+          "room_num": "1-101",
+          "room_id": 21
+        },
+        {
+          "area_id": 5,
+          "available": true,
+          "build_id": 9,
+          "build_name": "10-A座",
+          "capacity": 50,
+          "des": "",
+          "floor": "5",
+          "name": "小型会议室",
+          "open_reservation": true,
+          "open_reservation_c": "是",
+          "room_num": "5-21",
+          "room_id": 7
+        },
+        {
+          "area_id": 5,
+          "available": true,
+          "build_id": 9,
+          "build_name": "10-A座",
+          "capacity": 200,
+          "des": "",
+          "floor": "3B",
+          "name": "中型会议室",
+          "open_reservation": true,
+          "open_reservation_c": "是",
+          "room_num": "3B-16",
+          "room_id": 6
+        },
+        {
+          "area_id": 5,
+          "available": true,
+          "build_id": 9,
+          "build_name": "10-A座",
+          "capacity": 140,
+          "des": "",
+          "floor": "3",
+          "name": "中型会议室",
+          "open_reservation": true,
+          "open_reservation_c": "是",
+          "room_num": "3-27",
+          "room_id": 3
+        },
+        {
+          "area_id": 5,
+          "available": true,
+          "build_id": 9,
+          "build_name": "10-A座",
+          "capacity": 10,
+          "des": "",
+          "floor": "8",
+          "name": "迷你会议室",
+          "open_reservation": true,
+          "open_reservation_c": "是",
+          "room_num": "8-27",
+          "room_id": 36
+        }
+      ]
+    },
+    {
+      "city": "上海",
+      "area": "海淀区",
+      "build": "奥北科技园",
+      "fullname": "上海浦东新区-张江高科",
+      "record": 5,
+      "page": 1,
+      "rows": [
+        {
+          "area_id": 5,
+          "available": true,
+          "build_id": 9,
+          "build_name": "10-A座",
+          "capacity": 999,
+          "des": "此会议室预定需要管理员审批",
+          "floor": 1,
+          "name": "大会堂",
+          "open_reservation": false,
+          "open_reservation_c": "否",
+          "room_num": "1-101",
+          "room_id": 21
+        },
+        {
+          "area_id": 5,
+          "available": true,
+          "build_id": 9,
+          "build_name": "10-A座",
+          "capacity": 50,
+          "des": "",
+          "floor": "5",
+          "name": "小型会议室",
+          "open_reservation": true,
+          "open_reservation_c": "是",
+          "room_num": "5-21",
+          "room_id": 7
+        },
+        {
+          "area_id": 5,
+          "available": true,
+          "build_id": 9,
+          "build_name": "10-A座",
+          "capacity": 200,
+          "des": "",
+          "floor": "3B",
+          "name": "中型会议室",
+          "open_reservation": true,
+          "open_reservation_c": "是",
+          "room_num": "3B-16",
+          "room_id": 6
+        },
+        {
+          "area_id": 5,
+          "available": true,
+          "build_id": 9,
+          "build_name": "10-A座",
+          "capacity": 140,
+          "des": "",
+          "floor": "3",
+          "name": "中型会议室",
+          "open_reservation": true,
+          "open_reservation_c": "是",
+          "room_num": "3-27",
+          "room_id": 3
+        },
+        {
+          "area_id": 5,
+          "available": true,
+          "build_id": 9,
+          "build_name": "10-A座",
+          "capacity": 10,
+          "des": "",
+          "floor": "8",
+          "name": "迷你会议室",
+          "open_reservation": true,
+          "open_reservation_c": "是",
+          "room_num": "8-27",
+          "room_id": 36
+        }
+      ]
+    }
+  ],
+  "table_field": [
+    {
+      "type": "my_reserve",
+      "fields": [
+        "ID",
+        "预定时间",
+        "事由",
+        "楼号",
+        "层",
+        "会议室名称",
+        "容量",
+        "开始时间",
+        "结束时间",
+        "投影仪"
+      ],
+      "bottom_button": false
+    },
+    {
+      "type": "my_apply",
+      "fields": [
+        "ID",
+        "申请时间",
+        "事由",
+        "楼号",
+        "层",
+        "会议室名称",
+        "容量",
+        "开始时间",
+        "结束时间",
+        "状态",
+        "批复"
+      ],
+      "bottom_button": true
+    },
+    {
+      "type": "special_apply",
+      "fields": [
+        "ID",
+        "会议室",
+        "容量",
+        "申请人",
+        "申请时间",
+        "事由",
+        "状态",
+        "批复",
+        "审批人",
+        "状态",
+        "批复",
+        "审批人",
+        "操作"
+      ],
+      "bottom_button": true
+    },
+    {
+      "type": "apply_select",
+      "fields": [
+        "楼号",
+        "楼层",
+        "会议室编号",
+        "名称",
+        "容量",
+        "投影仪",
+        "开放预定",
+        "描述",
+        "室内图"
+      ],
+      "bottom_button": false
     }
   ]
 }

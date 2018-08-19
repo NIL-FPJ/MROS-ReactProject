@@ -3,6 +3,10 @@
 import React, {Component} from 'react'
 import './index.scss'
 
+import Filter from './Filter'
+import Table from './Table'
+
+
 class MeetingRoomManage extends Component {
   constructor (props) {
     super(props) 
@@ -11,7 +15,8 @@ class MeetingRoomManage extends Component {
   render () {
     return (
       <div className = "MeetingRoomManage">
-        会议室管理
+        <Filter/>
+        <Table/>
       </div>
     )
   }

@@ -3,6 +3,9 @@
 import React, {Component} from 'react'
 import './index.scss'
 
+import Reserve from './Reserve'
+import Apply from './Apply'
+
 class MyReserve extends Component {
   constructor (props) {
     super(props) 
@@ -11,7 +14,8 @@ class MyReserve extends Component {
   render () {
     return (
       <div className = "MyReserve">
-        我的预定
+      <Reserve></Reserve>
+      <Apply></Apply>
       </div>
     )
   }

@@ -1,3 +1,35 @@
-.app-home{
- 
+
+.ant-layout-content {
+  .app-home{
+    width: 100%;
+    min-height: 625px;
+    background-color: #f0f2f5;
+    position: relative;
+    .rules{
+      position: absolute;
+      left: 50%;
+      top:40%;
+      transform: translate(-50%, -50%);
+      width: 900px;
+      line-height: 30px;
+      font-size: 18px;
+      h2{
+        padding: 20px 10px 20px 0;
+        font-size: 26px;
+      }
+      .select{
+        display: flex;
+        justify-content: space-around;
+        padding: 50px;
+        a{
+          display: flex;
+          align-items: center;
+          font-size: 30px;
+          i{
+            font-size: 84px;
+          }
+        }
+      }
+    }
+  }
 }
