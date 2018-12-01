@@ -51,12 +51,12 @@ class Admin extends Component {
         </Sider>
         <Layout>
           <Header style={{ borderBottom: '2px solid #1890ff', background: '#fff', padding: 0, position: 'fixed', zIndex: 1, width: '100%' }}>
-            <div className = "hearderSelect" >
+            <div className="hearderSelect" >
               欢迎 ：
-              <Button><Icon style ={ {color: '#58bc58', fontWeight: 'bold'}} type={'user'} /> 17620138083 / 管理员</Button>
-              <Link to={ '/login' }><Icon type="logout" />退出</Link>
+              <Button><Icon style={{ color: '#58bc58', fontWeight: 'bold' }} type={'user'} /> 17620138083 / 管理员</Button>
+              <Link to={'/login'}><Icon type="logout" />退出</Link>
             </div>
-            
+
             <Breadcrumb style={{ padding: '20px 15px', height: '100%' }}>
               <Breadcrumb.Item>{this.state.clickTitle} /</Breadcrumb.Item>
             </Breadcrumb>

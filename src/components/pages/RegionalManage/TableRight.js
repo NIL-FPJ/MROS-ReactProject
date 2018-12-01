@@ -1,6 +1,6 @@
 
 import React, { Component } from 'react'
-import { Table, Button } from 'antd';
+import { Table } from 'antd';
 import './index.scss'
 
 const columns = [{

@@ -1,6 +1,6 @@
 
 import React, { Component } from 'react'
-import { Table, Button} from 'antd';
+import { Table } from 'antd';
 import './index.scss'
 
 const columns = [{
@@ -89,19 +89,6 @@ class MyTable extends Component {
     loading: false
   };
 
-  // 从后端获取会议室数据
-  componentWillMount() {
-    this.$http.ajax({
-      url: "http://localhost:3003/user/20002",
-      method: "PATCH",
-      params: {
-        "username": "方培杰1993"
-      }
-    }).then(data => {
-      console.log(data)
-    })
-  }
-
   start = () => {
     this.setState({ loading: true });
     // ajax request after empty completing
@@ -119,13 +106,13 @@ class MyTable extends Component {
   }
 
   render() {
-    const { loading, selectedRowKeys } = this.state;
-    const rowSelection = {
-      selectedRowKeys,
-      onChange: this.onSelectChange,
-      type: 'radio'
-    };
-    const hasSelected = selectedRowKeys.length > 0;
+    // const { loading, selectedRowKeys } = this.state;
+    // const rowSelection = {
+    //   selectedRowKeys,
+    //   onChange: this.onSelectChange,
+    //   type: 'radio'
+    // };
+    // const hasSelected = selectedRowKeys.length > 0;
     return (
       <div>
         <div style={{ marginBottom: 10 }}>

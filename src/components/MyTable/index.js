@@ -1,12 +1,17 @@
 
 import React, { Component } from 'react'
-import { Table, Button} from 'antd';
+import { Table } from 'antd';
 import './index.scss'
 
 const columns = [{
+  title: 'ID',
+  dataIndex: 'ID',
+  width: 60,
+  align: 'center'
+},{
   title: '预定时间',
-  dataIndex: 'name',
-  width: 150,
+  dataIndex: 'reserve_time',
+  width: 200,
   align: 'center'
 }, {
   title: '事由',
@@ -16,12 +21,12 @@ const columns = [{
 }, {
   title: '楼号',
   dataIndex: 'build_name',
-  width: 150,
+  width: 100,
   align: 'center'
 }, {
   title: '层',
   dataIndex: 'floor',
-  width: 150,
+  width: 100,
   align: 'center'
 }, {
   title: '会议室名称',
@@ -31,33 +36,33 @@ const columns = [{
 },{
   title: '容量',
   dataIndex: 'capacity',
-  width: 150,
+  width: 100,
   align: 'center'
 },{
   title: '开始时间',
   dataIndex: 'star_time',
-  width: 150,
+  width: 200,
   align: 'center'
 },{
   title: '结束时间',
-  dataIndex: 'star_time',
-  width: 150,
+  dataIndex: 'end_time',
+  width: 200,
   align: 'center'
 },{
   title: '状态',
   dataIndex: 'status',
-  width: 150,
+  width: 100,
   align: 'center'
 },{
   title: '批复',
   dataIndex: 'reply',
-  width: 150,
+  width: 100,
   align: 'center'
 },{
   title: '操作',
   key: 'action',
   align: 'center',
-  width: 100,
+  width: 150,
   render: (text, record) => (
     <span>
       <a className="ant-dropdown-link">
@@ -89,19 +94,6 @@ class MyTable extends Component {
     loading: false
   };
 
-  // 从后端获取会议室数据
-  componentWillMount() {
-    this.$http.ajax({
-      url: "http://localhost:3003/user/20002",
-      method: "PATCH",
-      params: {
-        "username": "方培杰1993"
-      }
-    }).then(data => {
-      console.log(data)
-    })
-  }
-
   start = () => {
     this.setState({ loading: true });
     // ajax request after empty completing
@@ -119,28 +111,15 @@ class MyTable extends Component {
   }
 
   render() {
-    const { loading, selectedRowKeys } = this.state;
-    const rowSelection = {
-      selectedRowKeys,
-      onChange: this.onSelectChange,
-      type: 'radio'
-    };
-    const hasSelected = selectedRowKeys.length > 0;
+    // const { loading, selectedRowKeys } = this.state;
+    // const rowSelection = {
+    //   selectedRowKeys,
+    //   onChange: this.onSelectChange,
+    //   type: 'radio'
+    // };
+    // const hasSelected = selectedRowKeys.length > 0;
     return (
       <div>
-        <div style={{ marginBottom: 10 }}>
-          {/* <Button
-            type="primary"
-            onClick={this.start}
-            disabled={!hasSelected}
-            loading={loading}
-          >
-            Reload
-          </Button> */}
-          {/* <span style={{ marginLeft: 8 }}>
-            {hasSelected ? `Selected ${selectedRowKeys.length} items` : ''}
-          </span> */}
-        </div>
         <Table title={() => '我的预定'} columns={columns} dataSource={data}  pagination={false} scroll={{ y: 240 }} />
       </div>
     );

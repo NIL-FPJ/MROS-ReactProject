@@ -70,7 +70,7 @@
   },
   "meeting_room_data": [
     {
-      "postId": 1,
+      "city_id": 1001,
       "city": "北京",
       "area": "海淀区",
       "build": "奥北科技园",
@@ -151,9 +151,10 @@
       ]
     },
     {
+      "city_id": 10012,
       "city": "上海",
-      "area": "海淀区",
-      "build": "奥北科技园",
+      "area": "上海浦东新区",
+      "build": "张江高科",
       "fullname": "上海浦东新区-张江高科",
       "record": 5,
       "page": 1,
@@ -161,8 +162,8 @@
         {
           "area_id": 5,
           "available": true,
-          "build_id": 9,
-          "build_name": "10-A座",
+          "build_id": 5,
+          "build_name": "8号-1",
           "capacity": 999,
           "des": "此会议室预定需要管理员审批",
           "floor": 1,
@@ -175,8 +176,8 @@
         {
           "area_id": 5,
           "available": true,
-          "build_id": 9,
-          "build_name": "10-A座",
+          "build_id": 5,
+          "build_name": "8号-1",
           "capacity": 50,
           "des": "",
           "floor": "5",
@@ -189,8 +190,8 @@
         {
           "area_id": 5,
           "available": true,
-          "build_id": 9,
-          "build_name": "10-A座",
+          "build_id": 5,
+          "build_name": "8号-1",
           "capacity": 200,
           "des": "",
           "floor": "3B",
@@ -203,8 +204,8 @@
         {
           "area_id": 5,
           "available": true,
-          "build_id": 9,
-          "build_name": "10-A座",
+          "build_id": 5,
+          "build_name": "8号-1",
           "capacity": 140,
           "des": "",
           "floor": "3",
@@ -217,12 +218,12 @@
         {
           "area_id": 5,
           "available": true,
-          "build_id": 9,
-          "build_name": "10-A座",
-          "capacity": 10,
+          "build_id": 5,
+          "build_name": "8号-1",
+          "capacity": 8,
           "des": "",
           "floor": "8",
-          "name": "迷你会议室",
+          "name": "商务会议室",
           "open_reservation": true,
           "open_reservation_c": "是",
           "room_num": "8-27",

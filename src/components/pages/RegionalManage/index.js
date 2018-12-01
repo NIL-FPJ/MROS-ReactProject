@@ -1,7 +1,7 @@
 
 
 import React, { Component } from 'react'
-import { Row, Col, Divider } from 'antd';
+import { Row, Col } from 'antd';
 import TableRight from './TableRight'
 import TableLeft from './TableLeft'
 

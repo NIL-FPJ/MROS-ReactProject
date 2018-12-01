@@ -41,24 +41,27 @@ class _DatePicker extends Component {
     this.handleClick = this.handleClick.bind(this)
   }
 
-  state = { starDate: '', endDate: '' }
+  state = { startDate: '', endDate: '' }
 
+  componentWillMount(){
+    if(this.state.reserveDate) this.props.getReserveDate(this.state)
+  }
+  
   getDate(_, value) {
-    let starDate = value[0]
+    let startDate = value[0]
     let endDate = value[1]
-    this.setState({ starDate, endDate })
+    this.setState({ startDate, endDate })
   }
 
   handleClick(e) {
     let now = new Date()
-    console.log(moment(now).format('YYYY-MM-DD HH:mm:ss'))
-    console.log(this.state)
-    // 存入store
-    
+    let reserveDate = moment(now).format('YYYY-MM-DD HH:mm:ss')
+    this.setState({ reserveDate })
   }
 
-
+  
   render() {
+    
     return (
       <div className="app-date-picker">
         <div>
@@ -70,7 +73,7 @@ class _DatePicker extends Component {
               defaultValue: [moment('08:00:00', 'HH:mm:ss'), moment('18:00:00', 'HH:mm:ss')],
             }}
             format="YYYY-MM-DD HH:mm:ss"
-            // open={false}
+            // open={true}
             allowClear={false}
             onOk={this.handleClick}
             onChange={this.getDate}

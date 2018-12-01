@@ -6,7 +6,6 @@ import bus from '../bus'
 
 const http = {
   ajax(options) {
-    console.log(options)
     return new Promise((resolve, reject) => {
       // 显示加载
       bus.emit('change-loading', true)

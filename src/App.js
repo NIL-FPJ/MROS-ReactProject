@@ -7,12 +7,12 @@ import Loading from './components/loading'
 class App extends Component {
   // 加载效果
   state = {
-    isloaging: false
+    isloading: false
   }
 
   componentDidMount() {
     this.$bus.on('change-loading', (bool) => {
-      this.setState({ isloaging: bool })
+      this.setState({ isloading: bool })
     })
   }
 
@@ -41,7 +41,7 @@ class App extends Component {
     return (
       <div className="App">
         {this.props.children}
-        <Loading isloging={this.state.isloaging} />
+        <Loading isloading={ this.state.isloading } />
       </div>
     );
   }

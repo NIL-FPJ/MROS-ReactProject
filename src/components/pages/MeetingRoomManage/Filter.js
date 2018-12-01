@@ -18,9 +18,9 @@ function handleFocus() {
 
 
 class Filter extends Component {
-  constructor(props) {
-    super(props)
-  }
+  // constructor(props) {
+  //   super(props)
+  // }
   render() {
     return (
       <div className="app-mg-filter">
